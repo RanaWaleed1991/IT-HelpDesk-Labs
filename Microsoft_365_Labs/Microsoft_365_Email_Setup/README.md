@@ -1,27 +1,37 @@
-# Microsoft 365 Business Standard Setup Lab
+# Microsoft 365 Email Setup Lab
 
-## Objective
-Set up and test email functionality using Microsoft 365 Business Standard trial with Outlook in a VMware Workstation Pro virtual lab.
+## Overview
+This lab demonstrates how to set up and test **Microsoft 365 Business Standard** email functionality using the **Outlook Desktop app** in a **Windows 10** virtual machine hosted on **VMware Workstation Pro**.  
+It simulates a real-world IT support task where an administrator configures and verifies email services in a corporate environment.
 
-## Steps Performed
-1. Configured VMware Workstation Pro with a Windows 10 VM.
-2. Installed Microsoft 365 apps, including Outlook, using the Business Standard trial account.
-3. Configured Outlook on a Windows 10 VM to connect to the Microsoft 365 email account.
-4. Sent and received test emails using Outlook Desktop app.
+[📄 View the full lab documentation](Microsoft_365_Email_Setup.md)
 
-## Results
-- Successfully configured Outlook with a Microsoft 365 Business email account.
-- Sent and received emails using Outlook desktop app.
+---
+
+## Prerequisites
+Before starting this lab, ensure you have:
+- VMware Workstation Pro installed
+- A Windows 10 virtual machine configured
+- A Microsoft 365 Business Standard trial account
+
+---
+
+## Lab Tasks
+1. Configure VMware Workstation Pro with a Windows 10 VM.  
+2. Install Microsoft 365 apps (including Outlook).  
+3. Configure Outlook to connect to the Microsoft 365 email account.  
+4. Send a test email.  
+5. Receive a test email.  
+
+---
 
 ## Screenshots
-![Windows 10 VM Configured](Windows_10_VM.png)
-![Microsoft 365 Installed](Microsoft_365_Installation.png)
-![Microsoft 365 email account configured in Outlook](Outlook_Interface.png)
-![Test Email Sent](Email_Sent.png)
-![Test Email Received](Email_Received.png)
+All screenshots for this lab are located in the `/screenshots` folder.
 
-## Tools Used
-- VMware Workstation Pro
-- Windows 10 VM
-- Microsoft 365 Business Standard trial
-- Outlook desktop app
+---
+
+## Lab Conclusion
+- Gain experience configuring Microsoft 365 email in Outlook.  
+- Learn how to verify email send/receive functionality in a virtualized setup.  
+- Develop skills relevant to IT support and Microsoft 365 administration.  
+- Understand the process of setting up Microsoft 365 Business Standard in a Windows 10 environment.  
