@@ -40,7 +40,7 @@ This lab demonstrates the process of:
 4. Add the newly created user as a member.
 
 **Screenshot:**  
-![User Added in Teams](screenshots/Test_User_Added_In_Teams.png)
+![User Added in Teams](screenshots/Test_User_Added_in_Teams.png)
 
 ---
 
