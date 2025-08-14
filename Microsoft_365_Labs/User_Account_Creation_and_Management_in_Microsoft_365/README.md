@@ -7,7 +7,7 @@ This lab demonstrates core Microsoft 365 administration tasks for onboarding a n
 
 ---
 
-## 🛠 Prerequisites
+## Prerequisites
 - Microsoft 365 tenant with **Business Standard** licenses.
 - Global Admin account.
 - Microsoft Teams and Outlook access.
@@ -15,7 +15,7 @@ This lab demonstrates core Microsoft 365 administration tasks for onboarding a n
 
 ---
 
-## 🧪 Lab Tasks
+## Lab Tasks
 1. **Create a New User Account** in Microsoft 365 Admin Center.
 2. **Enable Multi-Factor Authentication (MFA)** for security.
 3. **Create a Sales Team** in Microsoft Teams and add the user.
@@ -25,12 +25,12 @@ This lab demonstrates core Microsoft 365 administration tasks for onboarding a n
 
 ---
 
-## 📂 Screenshots Included
+## Screenshots Included
 All screenshots are located in the `/screenshots` folder:
 
 ---
 
-## 📈 Learning Outcomes
+## Learning Outcomes
 - Hands-on experience with Microsoft 365 user lifecycle management.
 - Understanding MFA configuration for account security.
 - Familiarity with Teams administration and collaboration setup.
