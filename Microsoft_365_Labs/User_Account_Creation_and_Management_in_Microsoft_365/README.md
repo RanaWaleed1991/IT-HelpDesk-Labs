@@ -1,6 +1,6 @@
 # Microsoft 365 User Creation & Verification Lab
 
-## 📌 Purpose
+## Purpose
 This lab demonstrates core Microsoft 365 administration tasks for onboarding a new employee, securing their account, and verifying access to essential communication and collaboration tools.
 
 📄 **[View Full Lab Documentation](M365_User_Creation_and_Verification.md)**
