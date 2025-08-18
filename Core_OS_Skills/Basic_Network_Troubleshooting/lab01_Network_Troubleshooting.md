@@ -24,22 +24,23 @@ nslookup www.microsoft.com
 ```
 **Observation:** All connectivity and DNS resolution worked correctly.  All Text files can be accessed in the [`/Outputs`](./Outouts) folder.
 
-Screenshot: screenshots/baseline_adapter_details.png
+**Screenshot:**
+![Baseline Adapter Details](screenshots/baseline_adapter_details.png) 
 
 ---
 
 ## Step 2 — Fault Injection: DNS Misconfiguration
 1. Changed DNS server to `10.255.255.10` (invalid).  
-    Screenshot: /screenshots/DNS_Misconfiguration.PNG
+    ![DNS Misconfiguration](screenshots/DNS_Misconfiguration.PNG)  
 
 2. Flushed DNS cache:  
    ```bat
    ipconfig /flushdns
    ```
-   Screenshot: /screenshots/Local_DNS_Cache_Cleared.PNG
+    ![Local DNS Cache Cleared](screenshots/Local_DNS_Cache_Cleared.PNG)
 
 3. Retested with `ping` and `nslookup`.
-   Screenshot: /screenshots/DNS_Broken_Results.PNG   
+    ![DNS Broken Results](screenshots/DNS_Broken_Results.PNG)   
 
 **Observation:**  
 - `ping 8.8.8.8` succeeded (Internet reachable by IP)  
@@ -47,28 +48,30 @@ Screenshot: screenshots/baseline_adapter_details.png
 - `nslookup` failed to resolve  
 
 **Resolution:** Restored valid DNS (8.8.8.8). Verified that name resolution worked again.  
-   Screenshot: /screenshots/Valid_DNS_Servers_Configured.PNG
-   Screenshot: /screenshots/After_Fixing_DNS_Results.PNG
+   ![Valid DNS Servers Configuration](screenshots/Valid_DNS_Servers_Configured.PNG)
+   ![After Fixing DNS Results](screenshots/After_Fixing_DNS_Results.PNG)
 
 ---
 
 ## Step 3 — Fault Injection: Missing Gateway
 1. Removed Default Gateway from IPv4 settings.
-    Screenshot: /screenshots/Missing_Gateway.PNG
+    ![Missing Gateway](screenshots/Missing_Gateway.PNG)
 
 2. Ran tests again.
-    Screenshot: /screenshots/Missing_Gateway_Results.PNG  
+    ![Missing Gateway Results](screenshots/Missing_Gateway_Results.PNG)  
 
 **Observation:**  
 - `nslookup www.microsoft.com` worked (DNS fine)  
 - `ping 8.8.8.8` failed  
 - `tracert 8.8.8.8` stopped at hop 1  
 
-   Screenshot: screenshots/missing_gateway_tracert.png
+   ![Missing Gateway Tracert](screenshots/missing_gateway_tracert.png)
 
 **Resolution:** Restored correct Default Gateway. Confirmed Internet access restored. 
-   Screenshot: /screenshots/Default_Gateway_Configured.PNG
-   Screenshot: /screenshots/After_FixingGateway_Results1.PNG 
+   ![Default Gateway Configured](screenshots/Default_Gateway_Configured.PNG)
+   ![After Fixing Gateway Results1](screenshots/After_FixingGateway_Results1.PNG) 
+   ![After Fixing Gateway Results2](screenshots/After_Fixing_Gateway_Results2.PNG) 
+   
 
 ---
 
