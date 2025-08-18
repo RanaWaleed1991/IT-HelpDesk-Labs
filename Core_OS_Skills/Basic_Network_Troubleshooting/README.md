@@ -3,7 +3,7 @@
 ## Purpose
 This lab demonstrates my ability to diagnose and resolve common network connectivity issues in Windows 10 using core troubleshooting commands.
 
-[View Full Lab Documentation](lab01_Network_Troubleshooting.md)
+**[View Full Lab Documentation](lab01_Network_Troubleshooting.md)**
 
 ## Prerequisites
 - VMware Workstation Pro
