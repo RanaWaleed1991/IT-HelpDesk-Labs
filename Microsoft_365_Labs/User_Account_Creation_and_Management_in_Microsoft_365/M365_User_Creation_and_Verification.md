@@ -75,7 +75,7 @@ This lab demonstrates the process of:
 ---
 
 ## **7. Lab Conclusion**
-In this lab, we successfully:
+In this lab, I successfully:
 - Created and licensed a new M365 user.
 - Secured the account with MFA.
 - Added the user to the Sales team in Teams.
