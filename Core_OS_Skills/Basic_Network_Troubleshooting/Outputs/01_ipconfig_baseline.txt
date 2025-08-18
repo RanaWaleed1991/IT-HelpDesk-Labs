@@ -1,0 +1,39 @@
+
+Windows IP Configuration
+
+   Host Name . . . . . . . . . . . . : DESKTOP-9OPLHE7
+   Primary Dns Suffix  . . . . . . . : 
+   Node Type . . . . . . . . . . . . : Hybrid
+   IP Routing Enabled. . . . . . . . : No
+   WINS Proxy Enabled. . . . . . . . : No
+   DNS Suffix Search List. . . . . . : localdomain
+
+Ethernet adapter Ethernet0:
+
+   Connection-specific DNS Suffix  . : localdomain
+   Description . . . . . . . . . . . : Intel(R) 82574L Gigabit Network Connection
+   Physical Address. . . . . . . . . : 00-0C-29-DC-97-36
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . . : Yes
+   Link-local IPv6 Address . . . . . : fe80::735e:afd3:883f:c839%7(Preferred) 
+   IPv4 Address. . . . . . . . . . . : 192.168.40.134(Preferred) 
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Lease Obtained. . . . . . . . . . : Thursday, August 14, 2025 1:25:20 PM
+   Lease Expires . . . . . . . . . . : Sunday, August 17, 2025 8:52:55 AM
+   Default Gateway . . . . . . . . . : 192.168.40.2
+   DHCP Server . . . . . . . . . . . : 192.168.40.254
+   DHCPv6 IAID . . . . . . . . . . . : 100666409
+   DHCPv6 Client DUID. . . . . . . . : 00-01-00-01-2F-EE-40-F7-00-0C-29-DC-97-36
+   DNS Servers . . . . . . . . . . . : 8.8.8.8
+                                       8.8.4.4
+   Primary WINS Server . . . . . . . : 192.168.40.2
+   NetBIOS over Tcpip. . . . . . . . : Enabled
+
+Ethernet adapter Bluetooth Network Connection:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . : 
+   Description . . . . . . . . . . . : Bluetooth Device (Personal Area Network)
+   Physical Address. . . . . . . . . : 4C-BB-58-4C-62-A8
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . . : Yes

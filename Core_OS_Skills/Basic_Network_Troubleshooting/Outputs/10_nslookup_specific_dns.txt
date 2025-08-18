@@ -1,0 +1,11 @@
+Server:  one.one.one.one
+Address:  1.1.1.1
+
+Name:    e13678.dscb.akamaiedge.net
+Addresses:  2600:1415:10:5a6::356e
+	  2600:1415:10:59e::356e
+	  23.60.149.219
+Aliases:  www.microsoft.com
+	  www.microsoft.com-c-3.edgekey.net
+	  www.microsoft.com-c-3.edgekey.net.globalredir.akadns.net
+

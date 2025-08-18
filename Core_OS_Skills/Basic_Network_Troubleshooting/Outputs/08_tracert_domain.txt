@@ -1,0 +1,17 @@
+
+Tracing route to e13678.dscb.akamaiedge.net [23.208.186.93]
+over a maximum of 30 hops:
+
+  1    <1 ms    <1 ms    <1 ms  192.168.40.2 
+  2     *        *        *     Request timed out.
+  3     *        *        *     Request timed out.
+  4     *        *        *     Request timed out.
+  5     *        *        *     Request timed out.
+  6     *        *        *     Request timed out.
+  7     *        *        *     Request timed out.
+  8     *        *        *     Request timed out.
+  9     *        *        *     Request timed out.
+ 10     *        *        *     Request timed out.
+ 11    88 ms    28 ms    29 ms  a23-208-186-93.deploy.static.akamaitechnologies.com [23.208.186.93] 
+
+Trace complete.
