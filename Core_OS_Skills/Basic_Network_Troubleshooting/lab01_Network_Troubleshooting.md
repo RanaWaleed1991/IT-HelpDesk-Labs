@@ -98,4 +98,6 @@ This lab demonstrated how to:
 - Differentiate between **DNS issues** and **Routing issues**  
 - Simulate and fix real-world connectivity problems  
 
-**Key takeaway:** Structured troubleshooting saves time and quickly narrows down the root cause of network issues.
+**Key takeaway:* 
+
+- Structured troubleshooting saves time and quickly narrows down the root cause of network issues.
