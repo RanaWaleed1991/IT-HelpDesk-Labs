@@ -75,9 +75,9 @@ All connectivity and DNS resolution worked correctly.  All Text files can be acc
     ![Missing Gateway Results](screenshots/Missing_Gateway_Results.PNG)  
 
 **Observation:**  
-- `nslookup www.microsoft.com` worked (DNS fine)  
-- `ping 8.8.8.8` failed  
-- `tracert 8.8.8.8` stopped at hop 1  
+- `ping 8.8.8.8` Failed 
+- `ping google.com` Failed (Could Not Find Host)  
+- `tracert 8.8.8.8` (Transmit Error)   
    
 **Resolution:** 
  
