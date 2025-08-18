@@ -3,9 +3,10 @@
 ---
 
 ## Overview
-In this lab, I practiced troubleshooting network issues on a Windows 10 VM.  
-I captured a healthy baseline, then intentionally misconfigured DNS and the default gateway to simulate real-world problems.  
-Finally, I documented how each issue was diagnosed and resolved.
+In this lab, I practiced:
+- Troubleshooting network issues on a Windows 10 VM.  
+- I captured a healthy baseline, then intentionally misconfigured DNS and the default gateway to simulate real-world problems.  
+- Finally, I documented how each issue was diagnosed and resolved.
 
 ---
 
@@ -34,17 +35,17 @@ All connectivity and DNS resolution worked correctly.  All Text files can be acc
 
 ## Step 2 — Fault Injection: DNS Misconfiguration
 
-1. Changed DNS server to `10.255.255.10` (invalid).  
+1. Changed **DNS server** to `10.255.255.10` (invalid).  
 
    ![DNS Misconfiguration](screenshots/DNS_Misconfiguration.PNG)  
 
-3. Flushed DNS cache:  
+3. Flushed **DNS cache**:  
    ```bat
    ipconfig /flushdns
    ```
     ![Local DNS Cache Cleared](screenshots/Local_DNS_Cache_Cleared.PNG)
 
-4. Retested with `ping` and `nslookup`.
+4. Retested with **`ping`** and **`nslookup`**.
 
     ![DNS Broken Results](screenshots/DNS_Broken_Results.PNG)   
 
@@ -55,7 +56,7 @@ All connectivity and DNS resolution worked correctly.  All Text files can be acc
 
 **Resolution:**
 
- Restored valid DNS (8.8.8.8). Verified that name resolution worked again.  
+ Restored **valid DNS (8.8.8.8)**. Verified that name resolution worked again.  
    
    ![Valid DNS Servers Configuration](screenshots/Valid_DNS_Servers_Configured.PNG)
    
@@ -65,7 +66,7 @@ All connectivity and DNS resolution worked correctly.  All Text files can be acc
 
 ## Step 3 — Fault Injection: Missing Gateway
 
-1. Removed Default Gateway from IPv4 settings.
+1. Removed **Default Gateway** from IPv4 settings.
 
     ![Missing Gateway](screenshots/Missing_Gateway.PNG)
 
@@ -80,7 +81,7 @@ All connectivity and DNS resolution worked correctly.  All Text files can be acc
    
 **Resolution:** 
  
- Restored correct Default Gateway. Confirmed Internet access restored. 
+ Restored correct **Default Gateway**. Confirmed Internet access restored. 
    
    ![Default Gateway Configured](screenshots/Default_Gateway_Configured.PNG)
    
