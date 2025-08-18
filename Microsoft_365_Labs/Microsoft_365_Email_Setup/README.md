@@ -4,7 +4,7 @@
 This lab demonstrates how to set up and test **Microsoft 365 Business Standard** email functionality using the **Outlook Desktop app** in a **Windows 10** virtual machine hosted on **VMware Workstation Pro**.  
 It simulates a real-world IT support task where an administrator configures and verifies email services in a corporate environment.
 
-[📄 View the full lab documentation](Microsoft_365_Email_Setup.md)
+**[View the full lab documentation](Microsoft_365_Email_Setup.md)**
 
 ---
 
