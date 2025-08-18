@@ -22,7 +22,7 @@ tracert 8.8.8.8
 tracert www.microsoft.com
 nslookup www.microsoft.com
 ```
-**Observation:** All connectivity and DNS resolution worked correctly.  All Text files can be accessed in the [`/Outputs`](./Outouts) folder.
+**Observation:** All connectivity and DNS resolution worked correctly.  All Text files can be accessed in the [`/Outputs`](./Outputs) folder.
 
 **Screenshot:**
 ![Baseline Adapter Details](screenshots/baseline_adapter_details.png) 
