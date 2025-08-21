@@ -44,7 +44,7 @@ The main bottleneck observed was **high disk usage** and **long boot duration**,
     
   - Disk usage dropped to **3%**, with CPU/Memory stable.
  
-   !-[Task Manager Result](screenshots/Task_Manager_Processes_Disk_After.PNG)  
+   ![Task Manager Result](screenshots/Task_Manager_Processes_Disk_After.PNG)  
 
 - **Event Viewer (Event ID 100 – Boot Duration)**  
     
