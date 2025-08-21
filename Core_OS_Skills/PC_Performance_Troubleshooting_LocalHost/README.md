@@ -1,8 +1,9 @@
 # PC Performance Troubleshooting (Lab 02 - Local Host)
 
 ## Purpose
-This lab demonstrates **Windows PC performance troubleshooting** on my personal computer.  
-[View Full Lab Documentation](lab02_PC_Performance_Troubleshooting.md)
+This lab demonstrates **Windows PC performance troubleshooting** on my personal computer. 
+
+**[View Full Lab Documentation](lab02_PC_Performance_Troubleshooting.md)**
 
 ## Prerequisites
 - Windows system with administrator access  
