@@ -20,7 +20,7 @@ The main bottleneck observed was **high disk usage** and **long boot duration**,
     
   - Startup apps included iTunesHelper and Skype (enabled).
  
-    ![Task Manager Startup](screenshos/Task_Manager_Startup_Before.PNG)
+    ![Task Manager Startup](screenshots/Task_Manager_Startup_Before.PNG)
 
 - **Event Viewer (Event ID 100 – Boot Duration)**  
   
