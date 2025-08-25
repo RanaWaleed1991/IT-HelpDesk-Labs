@@ -22,7 +22,7 @@ For simulation purposes, the **Generic / Text Only** driver was selected.
 ## Step 3 – Installed Printer via IP
 Printer successfully installed via a dummy IP address.
 
-⚠️ Note: I was not able to print a test page because the IP was dummy and there was no actual printer to receive the job, so the print never executed.
+**Note:** I was not able to print a test page because the IP was dummy and there was no actual printer to receive the job, so the print never executed.
 
 ![Installed Printer](screenshots/Installed_Printer_Via_IP.PNG)
 
@@ -43,7 +43,7 @@ In Event Viewer → **Applications and Services Logs → Microsoft → Windows �
 ---
 
 ## Step 6 – Simulate Stuck Jobs in Queue
-Multiple jobs were queued, then the **Print Spooler service was stopped**, leaving jobs stuck in the queue.
+Multiple jobs were queued, then the **Print Spooler service was stopped**, leaving jobs stuck in the queue. "Cancel All Documents" option was not able to get executed
 
 ![Stuck Queue](screenshots/Queue_Stuck_Jobs.PNG)
 
@@ -63,7 +63,8 @@ The **Print Spooler service** was restarted, clearing the stuck jobs. Printing f
 
 ---
 
-## ✅ Lab Outcome
+##  Lab Outcome
+
 - Successfully added printer via TCP/IP  
 - Simulated **Offline** and **Stuck Job** issues  
 - Used **Event Viewer** for troubleshooting logs  
