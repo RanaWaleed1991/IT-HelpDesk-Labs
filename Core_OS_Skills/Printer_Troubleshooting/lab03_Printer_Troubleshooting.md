@@ -1,7 +1,7 @@
 ## Lab 03 - Printer Troubleshooting Lab
 
 ## Objective
-Practice adding a printer via IP, simulating offline and stuck jobs, and using Event Viewer to troubleshoot issues.
+In this Lab, I practiced adding a printer via IP, simulating offline and stuck jobs, and using Event Viewer to troubleshoot issues.
 
 ---
 
