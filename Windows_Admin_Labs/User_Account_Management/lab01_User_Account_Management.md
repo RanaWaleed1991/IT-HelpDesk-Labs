@@ -49,7 +49,7 @@ These are typical real-world tasks performed by Help Desk and Junior System Admi
 ### 5. Verify Using Command Prompt
 - Ran `net user` before and after deletion to verify user list.  
 
-![Users List Before](./screenshots/Users.List.PNG)  
+![Users List Before](./screenshots/Users_List.PNG)  
 ![Updated Users List](./screenshots/Updated_Users_List.PNG)  
 
 ---
