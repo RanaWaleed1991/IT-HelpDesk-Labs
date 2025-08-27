@@ -1,4 +1,4 @@
-# 🧪 Windows Administration Lab: Local Group Policy for Security
+# Windows Administration Lab: Local Group Policy for Security
 
 ## Overview
 This lab demonstrates how to **secure a Windows 10 endpoint using Local Group Policy** by enforcing password complexity requirements and disabling USB storage devices. These are essential steps in hardening a system to prevent weak credentials and unauthorized data access.
@@ -22,9 +22,9 @@ Computer Configuration → Windows Settings → Security Settings → Account Po
 4. Apply changes.
 
 **Screenshots:**  
-![Password Complexity Enabled](../screenshots/Password_Complexity_Requirements_Enabled.PNG)  
-![Minimum Password Length](../screenshots/Minimum_Password_Length_8_Characters.PNG)  
-![Password Policy Confirmation](../screenshots/Password_Policy_Window_Confirming_Changes.PNG)
+![Password Complexity Enabled](./screenshots/Password_Complexity_Requirements_Enabled.PNG)  
+![Minimum Password Length](./screenshots/Minimum_Password_Length_8_Characters.PNG)  
+![Password Policy Confirmation](./screenshots/Password_Policy_Window_Confirming_Changes.PNG)
 
 ---
 
