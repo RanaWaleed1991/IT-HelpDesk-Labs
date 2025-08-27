@@ -56,10 +56,11 @@ These are typical real-world tasks performed by Help Desk and Junior System Admi
 
 ## Conclusion
 This lab successfully demonstrated how to:  
-✔ Create a new user account  
-✔ Reset a user password  
-✔ Add a user to local groups  
-✔ Delete an obsolete account  
-✔ Verify changes with Command Prompt  
+
+- Create a new user account  
+- Reset a user password  
+- Add a user to local groups  
+- Delete an obsolete account  
+- Verify changes with Command Prompt  
 
 These are essential skills for IT Support/Help Desk technicians to manage local accounts in a Windows environment.
