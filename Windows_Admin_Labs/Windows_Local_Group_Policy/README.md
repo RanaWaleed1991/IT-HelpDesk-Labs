@@ -1,7 +1,7 @@
 # Windows Local Group Policy Lab
 
 ## Purpose
-This lab demonstrates **Windows Local Group Policy Management in Windows 10** using GUI tools and verifying policy implementation using Command Prompt.
+This lab demonstrates **Windows Local Group Policy Management in Windows 10** using GUI tools and results are verified by setting weak password and plugging a USB device
 
 [View Full Lab Documentation](lab02_Local_Group_Policy.md)
 
