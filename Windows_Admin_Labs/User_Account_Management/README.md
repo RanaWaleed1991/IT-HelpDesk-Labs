@@ -21,7 +21,7 @@ This lab demonstrates **local user account management in Windows 10** using both
 All screenshots are stored in the `/screenshots/` folder.
 
 ## Lab Outcomes
-By completing this lab, you will demonstrate the ability to:
+By completing this lab, I have demonstrated the ability to:
 - Manage user accounts in Windows 10
 - Reset and manage passwords
 - Control local group memberships
