@@ -1,4 +1,4 @@
-# 🖨️ Printer Troubleshooting Lab
+# Printer Troubleshooting Lab
 
 ## Purpose
 This lab simulates real-world **printer troubleshooting scenarios** on a Windows 10 VM.  
