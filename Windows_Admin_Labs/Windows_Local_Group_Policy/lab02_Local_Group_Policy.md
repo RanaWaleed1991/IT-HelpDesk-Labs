@@ -36,8 +36,8 @@ Computer Configuration → Administrative Templates → System → Removable Sto
 3. Apply changes.
 
 **Screenshots:**  
-![USB Storage Denied Policy](../screenshots/All_Removable_Storage_Classes_Enabled.PNG)  
-![USB Policy Confirmation](../screenshots/Policy_Window_Confirming_USB_Storage_Denied.PNG)
+![USB Storage Denied Policy](./screenshots/All_Removable_Storage_Classes_Enabled.PNG)  
+![USB Policy Confirmation](./screenshots/Policy_Window_Confirming_USB_Storage_Denied.PNG)
 
 ---
 
@@ -49,9 +49,9 @@ gpupdate /force
 3. Test **USB policy**: Insert a USB drive → access should be denied.
 
 **Screenshots:**  
-![Policy Updated](../screenshots/Policy_Updated_Successfully.PNG)  
-![Password Failed](../screenshots/Password_Failed_Because_Of_Complexity_Policy.PNG)  
-![USB Access Denied](../screenshots/USB_Access_Denied.PNG)
+![Policy Updated](./screenshots/Policy_Updated_Successfully.PNG)  
+![Password Failed](./screenshots/Password_Failed_Because_Of_Complexity_Policy.PNG)  
+![USB Access Denied](./screenshots/USB_Access_Denied.PNG)
 
 ---
 
