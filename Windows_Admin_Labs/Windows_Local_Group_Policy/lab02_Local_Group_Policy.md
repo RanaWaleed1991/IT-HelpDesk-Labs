@@ -1,4 +1,4 @@
-# 🧪 Windows Administration Lab: Local Group Policy for Security
+# Windows Administration Lab: Local Group Policy for Security
 
 ## Overview
 This lab demonstrates how to **secure a Windows 10 endpoint using Local Group Policy** by enforcing password complexity requirements and disabling USB storage devices. These are essential steps in hardening a system to prevent weak credentials and unauthorized data access.
