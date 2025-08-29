@@ -8,58 +8,64 @@ This lab demonstrates how to **secure a Windows 10 endpoint using Local Group Po
 ## Steps and Screenshots
 
 ### Step 1: Access the Local Group Policy Editor
-1. Press `Win + R`, type `gpedit.msc`, and press **Enter**.  
-2. This opens the **Local Group Policy Editor** where security settings can be managed.
+1. Open **Local Group Policy Editor (*gpedit.msc*)**
+2. This will be used to manage security settings.
 
 ---
 
 ### Step 2: Enforce Password Complexity
+
 1. Navigate to:  
-Computer Configuration → Windows Settings → Security Settings → Account Policies → Password Policy
+**Computer Configuration → Windows Settings → Security Settings → Account Policies → Password Policy**
 
 2. Enable **Password must meet complexity requirements**.  
-3. Set **Minimum Password Length** to **8 characters**.  
-4. Apply changes.
 
-**Screenshots:**  
-![Password Complexity Enabled](../screenshots/Password_Complexity_Requirements_Enabled.PNG)  
-![Minimum Password Length](../screenshots/Minimum_Password_Length_8_Characters.PNG)  
-![Password Policy Confirmation](../screenshots/Password_Policy_Window_Confirming_Changes.PNG)
+![Password Complexity Enabled](./screenshots/Password_Complexity_Requirements_Enabled.PNG)  
+
+3. I have set **Minimum Password Length** to **8 characters**.  
+
+![Minimum Password Length](./screenshots/Minimum_Password_Length_8_Characters.PNG) 
+
+4. Password Policy changed.
+
+![Password Policy Confirmation](./screenshots/Password_Policy_Window_Confirming_Changes.PNG)
 
 ---
 
 ### Step 3: Disable USB Storage Devices
+
 1. Navigate to:  
-Computer Configuration → Administrative Templates → System → Removable Storage Access
+**Computer Configuration → Administrative Templates → System → Removable Storage Access**
 
-2. Enable **All Removable Storage classes: Deny all access**.  
-3. Apply changes.
+2. External storage policy is implemented by enabling **All Removable Storage classes: Deny all access**.  
 
-**Screenshots:**  
-![USB Storage Denied Policy](../screenshots/All_Removable_Storage_Classes_Enabled.PNG)  
-![USB Policy Confirmation](../screenshots/Policy_Window_Confirming_USB_Storage_Denied.PNG)
+![USB Storage Denied Policy](./screenshots/All_Removable_Storage_Classes_Enabled.PNG)
+
+3. Policy window confirming that the policy has been configured .
+
+![USB Policy Confirmation](./screenshots/Policy_Window_Confirming_USB_Storage_Denied.PNG)
 
 ---
 
 ### Step 4: Verify the Policy
-1. Run the following in **Command Prompt** to apply policies immediately:  
-gpupdate /force
 
-2. Test **password policy**: Try setting a weak password → it should fail.  
-3. Test **USB policy**: Insert a USB drive → access should be denied.
+1. Policies are applied immediately by running **gpupdate/force** in **Command Prompt**
 
-**Screenshots:**  
-![Policy Updated](../screenshots/Policy_Updated_Successfully.PNG)  
-![Password Failed](../screenshots/Password_Failed_Because_Of_Complexity_Policy.PNG)  
-![USB Access Denied](../screenshots/USB_Access_Denied.PNG)
+![Policy Updated](./screenshots/Policy_Updated_Successfully.PNG) 
+
+2. I tested **Password policy** by setting a weak password and it failed. 
+
+![Password Failed](./screenshots/Password_Failed_Because_Of_Complexity_Policy.PNG) 
+
+3. Lastly, I tested **Removable Storage Policy** by plugging a USB drive. Access was denied.
+
+![USB Access Denied](./screenshots/USB_Access_Denied.PNG)
 
 ---
 
 ## Conclusion
-This lab successfully demonstrated how to:  
-- Enforce **password complexity** and minimum length requirements for stronger authentication.  
-- Disable **USB storage devices** to prevent unauthorized data access.  
-- Verify applied policies to ensure endpoint security hardening is effective.  
+This lab successfully demonstrated **Windows Group Policy Implementation**. I:
 
-Configuring **local security policies** is a critical skill for Help Desk and Junior SysAdmin roles.
-
+- Enforced **Password Complexity** and minimum length requirements for stronger authentication.  
+- Disabled **USB storage devices** to prevent unauthorized data access.  
+- Verified applied policies to ensure endpoint security hardening is effective.  
