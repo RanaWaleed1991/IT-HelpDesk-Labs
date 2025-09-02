@@ -55,7 +55,7 @@ I launched **Windows Update** and allowed the system to download the latest patc
 
 I created a local user account and configured login with a PIN.  
 
-![User Account Created Login Page Pin Required](./screenshots/User_Account_Created_Login_Page_Pin_Required.png)
+![User Account Created Login Page Pin Required](./screenshots/User_Account_Created_Login_Page.png)
 
 ### 9. First Login to Windows 11
 
