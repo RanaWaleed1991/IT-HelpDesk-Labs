@@ -1,9 +1,8 @@
 # Remote Support Tools Lab — Quick Assist (Windows 10/11)
 
-## Use
+## Overview
 This lab demonstrates the use of **Quick Assist** to remotely support an end-user by setting a default printer and confirming functionality.
 
-## Overview
 I connected from the Tech-PC to the End-User PC using Quick Assist. Once the session was established, I guided the user’s computer to configure the correct default printer and tested it successfully.
 
 ---
