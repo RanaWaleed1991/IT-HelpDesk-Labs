@@ -28,7 +28,7 @@ The installation was successfully completed as shown here.
 
 After promotion, the Server Manager dashboard displayed the AD DS and DNS roles.  
 
-![Step15](./screenshots/Server_Manager_Dashboard_After_Promoted_To_Domain_Controller_Showing_AD DS_And_DNS.png)
+![Step15](/screenshots/Server_Manager_Dashboard_After_Promoted_To_Domain_Controller_Showing_AD,DS_And_DNS.PNG)
 
 ### Step 16: Creating a User Object
 
@@ -64,7 +64,7 @@ The shared folder appeared successfully on the network.
 
 Finally, I granted **Forward Group** permissions to the folder, ensuring secure access control.
 
-![Step21](./screenshots/Forward_Group_Granted_Permission_For_Forward Data_Folder_Displaying_RBAC.PNG)
+![Step21](./screenshots/Forward_Group_Granted_Permission_For_Forward_Data_Folder_Displaying_RBAC.PNG)
 
 ## Conclusion
 
