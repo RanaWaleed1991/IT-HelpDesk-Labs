@@ -22,13 +22,13 @@ Before installation, I confirmed the selections to ensure the correct role and f
 
 The installation was successfully completed as shown here. 
 
-![Step14](/screenshots/Installation_Progress_Page_Showing_Installation_Succeeded_On_Rana-DC01.PNG)
+![Step14](./screenshots/Installation_Progress_Page_Showing_Installation_Succeeded_On_Rana-DC01.PNG)
 
 ### Step 15: Server Promoted to Domain Controller
 
 After promotion, the Server Manager dashboard displayed the AD DS and DNS roles.  
 
-![Step15](/screenshots/Server_Manager_Dashboard_After_Promoted_To_Domain_Controller_Showing_AD,DS_And_DNS.PNG)
+![Step15](./screenshots/Server_Manager_Dashboard_After_Promoted_To_Domain_Controller_Showing_AD,DS_And_DNS.PNG)
 
 ### Step 16: Creating a User Object
 
