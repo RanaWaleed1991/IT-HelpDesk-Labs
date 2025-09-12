@@ -28,7 +28,7 @@ The installation was successfully completed as shown here.
 
 After promotion, the Server Manager dashboard displayed the AD DS and DNS roles.  
 
-![Step15](./screenshots/Server_Manager_Dashboard_After_Promoted_To_Domain_Controller_Showing_AD,DS_And_DNS.PNG)
+![Step15](./screenshots/Server_Manager_Dashboard_After_Promoted_To_Domain_Controller_Showing_AD,DS_And_DNS.png)
 
 ### Step 16: Creating a User Object
 
