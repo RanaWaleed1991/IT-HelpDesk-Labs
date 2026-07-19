@@ -6,13 +6,13 @@
 **Priority:** P2 — Business Impact
 **Environment:** Microsoft Entra ID / Microsoft 365 (ResolvePoint IT tenant)
 
-\---
+---
 
 ## Problem Statement
 
 A new employee, James Whitfield, is starting Monday as a Marketing Coordinator and requires a fully provisioned Microsoft 365 account before his first day. The task is to create his identity in Entra ID, assign the correct license and group-based access following the principle of least privilege, enable Self-Service Password Reset to reduce future helpdesk load, and verify the account works end-to-end. A failure to provision correctly results in a P1 ticket on the new hire's first day.
 
-\---
+---
 
 ## Tools Used
 
@@ -21,7 +21,7 @@ A new employee, James Whitfield, is starting Monday as a Marketing Coordinator a
 * **Microsoft 365 User Portal** (verification)
 * **Web browser** (host machine — cloud admin tasks require no local VM)
 
-\---
+---
 
 ## Technical Steps
 
@@ -30,75 +30,75 @@ A new employee, James Whitfield, is starting Monday as a Marketing Coordinator a
 Navigated to the Entra ID portal → **Users → All Users → New User → Create new user**. Populated the user principal name, display name, job title (Marketing Coordinator), and department (Marketing). Set a temporary password with **"Require password change on first sign-in"** enabled.
 
 **Screenshot:**
-!\[New User Created in Entra ID](./screenshots/New\_User\_Created\_in\_EntraID.png)
+![New User Created in Entra ID](./screenshots/New\_User\_Created\_in\_EntraID.png)
 
-\---
+---
 
 ### 2\. Assign a Microsoft 365 License
 
 Switched to the **Microsoft 365 Admin Center → Users → Active Users → James Whitfield → Licenses and apps**. Assigned the available Microsoft 365 license and saved changes, granting access to Outlook, Teams, SharePoint, and OneDrive.
 
 **Screenshot:**
-!\[License Assigned in M365 Admin Center](./screenshots/License\_Assigned\_to\_User\_M365\_Admin\_Center.png)
+![License Assigned in M365 Admin Center](./screenshots/License\_Assigned\_to\_User\_M365\_Admin\_Center.png)
 
-\---
+---
 
 ### 3\. Create a Security Group
 
 Returned to Entra ID → **Groups → All Groups → New Group**. Created a **Security** group named **Marketing-Team** with **Assigned** membership type. Security groups are the modern method for managing access and license assignment at scale, rather than configuring each user individually.
 
 **Screenshot:**
-!\[Marketing-Team Security Group Created](./screenshots/Marketing-Team\_Security\_Group\_Created.png)
+![Marketing-Team Security Group Created](./screenshots/Marketing-Team\_Security\_Group\_Created.png)
 
-\---
+---
 
 ### 4\. Add the User to the Security Group
 
 Added James Whitfield as a member of the Marketing-Team security group. Through group membership he inherits the department's shared access to SharePoint sites and file resources.
 
 **Screenshot:**
-!\[James Whitfield Added to Marketing-Team](./screenshots/James-Whitfield\_Added\_As\_A\_User\_To\_Marketing-Team\_Security\_Group.png)
+![James Whitfield Added to Marketing-Team](./screenshots/James-Whitfield\_Added\_As\_A\_User\_To\_Marketing-Team\_Security\_Group.png)
 
-\---
+---
 
 ### 5\. Assign an RBAC Role (Least Privilege Demonstration)
 
 To demonstrate Role-Based Access Control, assigned the **Helpdesk Administrator** role to a separate test account (Ronaldo). James, as a standard user, correctly receives **no administrative role** — he only needs standard user access to do his job. This is the Principle of Least Privilege in practice: administrative roles are scoped and granted only where the job function requires them.
 
 **Screenshot:**
-!\[Helpdesk Administrator Role Assigned](./screenshots/User\_Named\_Ronaldo\_Assigned\_HelpDesk-Administrator\_Role.png)
+![Helpdesk Administrator Role Assigned](./screenshots/User\_Named\_Ronaldo\_Assigned\_HelpDesk-Administrator\_Role.png)
 
-\---
+---
 
 ### 6\. Configure Self-Service Password Reset (SSPR)
 
 Navigated to **Protection → Password reset**. Set SSPR to **Selected** and scoped it to the **Marketing-Team** group. Configured authentication methods and the registration policy so users are prompted to register their reset methods on sign-in.
 
 **Screenshot:**
-!\[SSPR Configuration for Marketing-Team](./screenshots/SSPR\_Configuration\_For\_Marketing-Team.png)
+![SSPR Configuration for Marketing-Team](./screenshots/SSPR\_Configuration\_For\_Marketing-Team.png)
 
 > \*\*Troubleshooting Note — Trial Tenant Limitation:\*\*
 > During SSPR configuration, the Email and Mobile Phone authentication methods appeared briefly then reverted, leaving Security Questions as the only selectable option. This is a known limitation of trial/developer tenants, which restrict certain authentication methods. In a \*\*production environment\*\*, Mobile Phone (SMS) and Email would be the recommended methods, with Microsoft Authenticator as the strongest option. Security Questions were configured here to complete the lab; the configuration logic is identical regardless of method.
 
-\---
+---
 
 ### 7\. Verify the Account (First Login)
 
 Opened a private browser window and signed in to the Microsoft 365 portal as James Whitfield using the temporary password. Completed the forced password change and confirmed the account landed on the M365 home portal with the full app suite (Outlook, Word, Excel, Teams, SharePoint, OneDrive) visible and accessible.
 
 **Screenshot:**
-!\[James Whitfield Successful First Login](./screenshots/User\_James-Whitfield\_Successful\_First\_Login\_M365\_Apps\_Visible.png)
+![James Whitfield Successful First Login](./screenshots/User\_James-Whitfield\_Successful\_First\_Login\_M365\_Apps\_Visible.png)
 
-\---
+---
 
 ### 8\. Review the Audit Log
 
 Reviewed **James Whitfield → Audit logs** to confirm the full provisioning trail. The log shows timestamped, successful entries for user creation, password change, security method registration, and user attribute updates — providing a complete, auditable record of the onboarding.
 
 **Screenshot:**
-!\[Audit Log with Actions and Timestamps](./screenshots/James-Whitfield\_Audit\_Log\_With\_Actions\_And\_TimeStamps.png)
+![Audit Log with Actions and Timestamps](./screenshots/James-Whitfield\_Audit\_Log\_With\_Actions\_And\_TimeStamps.png)
 
-\---
+---
 
 ## Key Takeaways
 
@@ -107,7 +107,7 @@ Reviewed **James Whitfield → Audit logs** to confirm the full provisioning tra
 * **SSPR is proactive ticket reduction.** Configuring Self-Service Password Reset directly reduces the single highest-volume helpdesk category. Thinking about prevention, not just resolution, is what distinguishes L2-level operational thinking.
 * **The audit log is the proof.** Verification and audit review are the steps junior techs skip. They are what turn "I think it worked" into "here is the timestamped evidence that it worked."
 
-\---
+---
 
 ## Skills Demonstrated
 
