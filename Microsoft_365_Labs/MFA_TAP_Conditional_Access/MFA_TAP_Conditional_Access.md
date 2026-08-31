@@ -26,7 +26,7 @@ James Whitfield (Marketing Coordinator) replaced his phone over the weekend and 
 Before making any changes, documented the tenant's starting security posture. Navigated to **Overview → Properties → Security defaults** and confirmed the tenant was protected by Security Defaults — the baseline all-or-nothing MFA enforcement mechanism.
 
 **Screenshot:**
-![Security Defaults ON Baseline](screenshots/Security_Defaults_showing_ON_as the_baseline_state.png)
+![Security Defaults ON Baseline](screenshots/Security_Defaults_showing_ON_as_the_baseline_state)
 
 ---
 
