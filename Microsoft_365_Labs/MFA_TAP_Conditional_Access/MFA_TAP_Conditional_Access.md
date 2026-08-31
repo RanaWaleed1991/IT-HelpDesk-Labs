@@ -1,7 +1,5 @@
-# Ticket #502: User Locked Out — MFA Recovery, Temporary Access Pass & Conditional Access Hardening
+# User Locked Out — MFA Recovery, Temporary Access Pass & Conditional Access Hardening
 
-## Header
-**Scenario ID:** Ticket #502
 **Ticket Subject:** User Locked Out — MFA Recovery After Device Change
 **Category:** Identity & Access Management / Security
 **Priority:** P2 — User Blocked
