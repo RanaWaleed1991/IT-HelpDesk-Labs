@@ -116,17 +116,5 @@ MFA ticket received
 
 ---
 
-## Interview Talking Points
-**"A user got a new phone and is locked out of MFA. Walk me through how you'd resolve it."**
-> First I verify the user's identity through an approved channel. Then, rather than resetting their password, I generate a Temporary Access Pass — a time-limited code that lets them sign in and register MFA on the new device. I have them re-register the Authenticator app, confirm the old stale method is cleared, verify a clean sign-in, and close the ticket. No password reset needed, no security compromise.
-
-**"What's the difference between Security Defaults and Conditional Access?"**
-> Security Defaults is a single on/off switch that enforces baseline MFA for everyone — great for small orgs, no license cost. Conditional Access gives you granular, policy-based control: you can target specific users, apps, locations, or sign-in risk, and build exceptions. It needs Entra ID P1. Critically, you can't run both — you disable Security Defaults to adopt Conditional Access, which is exactly the migration an organisation makes as it grows.
-
-**"What's the biggest risk when rolling out a Conditional Access MFA policy?"**
-> Locking yourself out. If you enforce MFA on all users with no exclusion and something's misconfigured, you can lock the entire tenant — admins included. That's why you always exclude a break-glass account and start the policy in Report-only mode to validate it against real sign-ins before switching it on.
-
----
-
 ## Skills Demonstrated
 `Microsoft Entra ID` · `Multi-Factor Authentication (MFA)` · `Temporary Access Pass (TAP)` · `MFA Recovery & Troubleshooting` · `Conditional Access (design)` · `Security Defaults Migration` · `Least-Privilege / Break-Glass Design`
