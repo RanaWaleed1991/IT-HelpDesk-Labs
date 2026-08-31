@@ -28,7 +28,7 @@ James Whitfield (Marketing Coordinator) replaced his phone over the weekend and 
 Before making any changes, documented the tenant's starting security posture. Navigated to **Overview → Properties → Security defaults** and confirmed the tenant was protected by Security Defaults — the baseline all-or-nothing MFA enforcement mechanism.
 
 **Screenshot:**
-![Security Defaults ON Baseline](screenshots/Security_Defaults_ON_Baseline.png)
+![Security_Defaults_showing_ON_as_the_baseline_state](screenshots/Security_Defaults_showing_ON_as_the_baseline_state.png)
 
 ---
 
@@ -36,7 +36,7 @@ Before making any changes, documented the tenant's starting security posture. Na
 Diagnosed the lockout by navigating to **Users → All Users → James Whitfield → Authentication methods**. Reviewed the currently registered methods, which pointed to the old (now inaccessible) device — confirming the root cause of the lockout.
 
 **Screenshot:**
-![James Whitfield Authentication Methods](screenshots/James-Whitfield_Authentication_Methods.png)
+![James_Whitfield's_Authentication_methods_panel_showing_his_registered_methods](screenshots/James_Whitfield's_Authentication_methods_panel_showing_his_registered_methods.png)
 
 ---
 
@@ -44,7 +44,7 @@ Diagnosed the lockout by navigating to **Users → All Users → James Whitfield
 Cleared the stale authentication state by selecting **Require re-register multifactor authentication**. This forces the user to set up MFA fresh on their new device on next sign-in, without exposing the account or requiring a password reset.
 
 **Screenshot:**
-![MFA Re-registration Confirmation](screenshots/MFA_Re-registration_Confirmation.png)
+![The_confirmation_prompt_for_requiring_MFA_re-registration](screenshots/The_confirmation_prompt_for_requiring_MFA_re-registration.png)
 
 ---
 
@@ -52,7 +52,7 @@ Cleared the stale authentication state by selecting **Require re-register multif
 Issued a **Temporary Access Pass** to James via **Users → James Whitfield → Authentication methods → Add authentication method → Temporary Access Pass**. A TAP is a time-limited passcode that lets a locked-out user sign in *and* register new MFA methods — the correct L2 tool for device-loss recovery, avoiding an unnecessary password reset.
 
 **Screenshot:**
-![Temporary Access Pass Generated](screenshots/Temporary_Access_Pass_Generated.png)
+![The_generated_Temporary_Access_Pass_showing_the_code_and_validity_window](screenshots/The_generated_Temporary_Access_Pass_showing_the_code_and_validity_window.png)
 
 ---
 
@@ -60,20 +60,14 @@ Issued a **Temporary Access Pass** to James via **Users → James Whitfield → 
 Opened a private browser window, signed in to the Microsoft 365 portal as James, and entered the **Temporary Access Pass** instead of a password/MFA approval. The sign-in succeeded and prompted MFA re-registration.
 
 **Screenshot:**
-![James Whitfield Signing In With TAP](screenshots/James-Whitfield_Signing_In_With_TAP.png)
+![James_Whitfield_signing_in_using_TAP](screenshots/James_Whitfield_signing_in_using_TAP.png)
 
 Completed re-registration of the Microsoft Authenticator app, simulating setup on the new phone. The confirmation screen — **"Authenticator Added — This is now your default sign-in method"** — verified the full recovery loop closed successfully.
 
 **Screenshot:**
-![MFA Authenticator Re-added Success](screenshots/MFA_Authenticator_Re-added_Success.png)
+![MFA_Authenticator_successfully_re-added_for_James_Whitfield](screenshots/MFA_Authenticator_successfully_re-added_for_James_Whitfield.png)
 
 ---
-
-### 6 & 7. Conditional Access Migration — Design & Dependency
-The follow-on management task was to migrate the tenant from Security Defaults to a targeted Conditional Access policy requiring MFA. On reaching the Conditional Access policy builder, Entra ID confirmed the key architectural dependency: **Security Defaults must be disabled before a Conditional Access policy can be enabled** — the two enforcement mechanisms cannot run simultaneously.
-
-**Screenshot:**
-![Conditional Access Policy Creation with Security Defaults Warning](screenshots/Conditional_Access_Policy_Creation_Security_Defaults_Warning.png)
 
 **Policy Design (as it would be built in production):**
 
@@ -84,8 +78,6 @@ The follow-on management task was to migrate the tenant from Security Defaults t
 | Target resources | All cloud apps |
 | Grant | Grant access → Require multifactor authentication |
 | Enable policy | Report-only first, then On after validation |
-
-> **Environment Note:** The tenant's Microsoft 365 subscription expired before Steps 6–7 could be enforced end-to-end. The Conditional Access policy build is therefore documented as designed rather than saved-and-enforced. The dependency (disable Security Defaults first) and the correct policy structure are demonstrated by the policy-builder screenshot above. In a licensed production environment, this policy would be created in **Report-only** mode, validated against sign-in logs, then switched to **On**.
 
 > **Best Practice — Break-Glass Exclusion:** Any MFA-enforcing Conditional Access policy must exclude a dedicated break-glass admin account, and should always start in Report-only mode. Enabling a misconfigured policy in "On" mode with no exclusion is one of the most common ways administrators lock an entire organisation — including themselves — out of a tenant.
 
@@ -115,18 +107,6 @@ MFA ticket received
 - **Security Defaults and Conditional Access are a trade-off, not a stack.** Security Defaults is a free, all-or-nothing switch for small orgs; Conditional Access is granular and license-gated (Entra ID P1). You cannot run both — migrating from one to the other is a real decision every maturing organisation makes.
 - **Break-glass exclusions are non-negotiable.** The fastest way to cause a tenant-wide outage is enabling an MFA policy with no admin exception. Report-only mode plus a break-glass exclusion is the safe migration pattern.
 - **Document the process, not just the fix.** A written troubleshooting decision tree turns "I reset his MFA" into "I follow a repeatable diagnostic process" — which is what distinguishes L2-level operational thinking.
-
----
-
-## Interview Talking Points
-**"A user got a new phone and is locked out of MFA. Walk me through how you'd resolve it."**
-> First I verify the user's identity through an approved channel. Then, rather than resetting their password, I generate a Temporary Access Pass — a time-limited code that lets them sign in and register MFA on the new device. I have them re-register the Authenticator app, confirm the old stale method is cleared, verify a clean sign-in, and close the ticket. No password reset needed, no security compromise.
-
-**"What's the difference between Security Defaults and Conditional Access?"**
-> Security Defaults is a single on/off switch that enforces baseline MFA for everyone — great for small orgs, no license cost. Conditional Access gives you granular, policy-based control: you can target specific users, apps, locations, or sign-in risk, and build exceptions. It needs Entra ID P1. Critically, you can't run both — you disable Security Defaults to adopt Conditional Access, which is exactly the migration an organisation makes as it grows.
-
-**"What's the biggest risk when rolling out a Conditional Access MFA policy?"**
-> Locking yourself out. If you enforce MFA on all users with no exclusion and something's misconfigured, you can lock the entire tenant — admins included. That's why you always exclude a break-glass account and start the policy in Report-only mode to validate it against real sign-ins before switching it on.
 
 ---
 
