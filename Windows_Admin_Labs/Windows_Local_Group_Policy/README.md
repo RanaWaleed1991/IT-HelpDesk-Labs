@@ -1,26 +1,47 @@
-# Windows Local Group Policy Lab
+# Endpoint Hardening with Local Group Policy
+
+**[View Full Lab Documentation](lab02_Local_Group_Policy.md)**
 
 ## Purpose
-This lab demonstrates **Windows Local Group Policy Management in Windows 10** using GUI tools and results are verified by setting weak password and plugging a USB device
+This lab hardens a stand-alone Windows 10 workstation with Local Group Policy: password complexity and an 8-character minimum are enforced, all USB storage is blocked, and each control is proven by testing it as a user — a weak password is rejected and a USB drive is denied.
 
-[View Full Lab Documentation](lab02_Local_Group_Policy.md)
+---
+
+## Scenario
+A security review found that users on a non-domain workstation can set weak passwords and copy data to USB drives. Both risks must be closed and verified, without a domain to push policy from.
+
+---
 
 ## Prerequisites
-- Windows 10 Virtual Machine (VMware)
-- Local Administrator rights
+- Windows 10 virtual machine (VMware Workstation Pro), Pro edition or higher (gpedit.msc)
+- Local administrator rights
+- A USB drive for testing
+
+---
 
 ## Lab Tasks
-- Enforce password complexity requirements  
-- Set minimum password length to 8 characters  
-- Disable USB storage devices  
-- Verify applied policies with testing
+1. **Enable password complexity** requirements.
+2. **Set the minimum password length** to 8 characters.
+3. **Review the full password policy** and note remaining gaps.
+4. **Deny all removable storage** access.
+5. **Confirm** the removable storage setting.
+6. **Apply** with `gpupdate /force`.
+7. **Test** — attempt a weak password.
+8. **Test** — attempt to open a USB drive.
 
-## Screenshots
-All screenshots are stored in the `/screenshots/` folder.
+---
+
+## Screenshots Included
+8 screenshots in the [`screenshots`](screenshots) folder, embedded step by step in the lab documentation.
+
+---
 
 ## Lab Outcomes
-By completing this lab, I have demonstrated my ability to:
-  
-- Configure local group policies in Windows 10  
-- Implement my practical skills in securing endpoints  
+- Enforced password complexity and minimum length on a stand-alone PC.
+- Blocked USB storage without blocking other USB devices.
+- Verified both controls from the user's side, and documented follow-up recommendations.
 
+---
+
+## Skills Demonstrated
+`Local Group Policy` · `Password Policy` · `Removable Storage Control` · `Endpoint Hardening` · `gpupdate`

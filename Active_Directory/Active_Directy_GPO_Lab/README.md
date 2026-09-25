@@ -1,34 +1,45 @@
-# Active Directory GPO Lab
+# Active Directory GPO Lab — Control Panel Restriction & Screen Lock
 
-## Purpose  
+**[View Full Lab Documentation](Active_Directory_GPO_Lab.md)**
 
-This lab focuses on practicing Group Policy Object (GPO) management within Active Directory.  
-I implemented two policies: one to restrict Control Panel access for specific OUs and another to enforce auto screen lock after inactivity.  
+## Purpose
+This lab uses Active Directory Group Policy to stop staff in Management, Marketing and Sales from changing system settings through Control Panel, and to lock every computer in the domain after 5 minutes of inactivity — then proves both by signing in as a Marketing user.
 
-[View Full Lab Documentation](./Active_Directory_GPO_Lab.md)  
+---
 
-## Prerequisites  
+## Scenario
+Staff keep changing settings they shouldn't, and computers are being left unlocked. Two GPOs are built, each scoped to the right part of the domain (IT deliberately excluded from the restriction), and tested over Remote Desktop as the domain user Mark.
 
-- Basic understanding of Active Directory  
-- Access to a Windows Server with AD DS installed  
-- Domain-joined client machine for testing  
+---
 
-## Lab Tasks  
+## Prerequisites
+- An Active Directory domain with OUs (this lab used TryHackMe's "Active Directory Basics" environment, domain thm.local)
+- Group Policy Management Console access
+- A domain user in a target OU for testing, and Remote Desktop access
 
-1. Create and configure a GPO to restrict Control Panel access  
-2. Create and configure a GPO to enable auto screen lock  
-3. Link the GPOs to appropriate OUs  
-4. Test the applied policies with a domain user  
+---
 
-## Screenshots  
+## Lab Tasks
+1. **Create** the Restrict Control Panel Access GPO.
+2. **Configure** Prohibit access to Control Panel and PC settings.
+3. **Link** it to the Management, Marketing and Sales OUs only.
+4. **Create** the Auto Lock Screen GPO and link it to the domain root.
+5. **Set** the machine inactivity limit to 300 seconds.
+6. **Test** both policies by signing in as a Marketing user over RDP.
 
-All screenshots related to this lab are stored in the `/screenshots/` folder.  
+---
 
-## Learning Outcomes  
+## Screenshots Included
+13 screenshots in the [`screenshots`](screenshots) folder, embedded step by step in the lab documentation.
 
-By Completing this lab, I have successfully demonstrated:
+---
 
-- Creating and editing GPOs  
-- Linking GPOs to OUs and root domain  
-- Testing policy impact on domain users  
-- Understanding of AD-based policy management  
+## Learning Outcomes
+- Creating, editing and linking GPOs with GPMC.
+- Scoping policies to OUs, and the difference between user and computer settings.
+- Testing Group Policy as a user it is meant to target.
+
+---
+
+## Skills Demonstrated
+`Active Directory` · `Group Policy` · `OU Scoping` · `Endpoint Security` · `Remote Desktop` · `Policy Testing`
