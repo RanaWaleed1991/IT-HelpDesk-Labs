@@ -1,9 +1,9 @@
 # Entra ID User Lifecycle & RBAC
 
+**[View Full Lab Documentation](Entra_ID_User_Lifecycle_RBAC.md)**
+
 ## Purpose
 This lab demonstrates end-to-end new-hire provisioning in Microsoft Entra ID, following enterprise best practices: identity creation, group-based access, least-privilege RBAC, Self-Service Password Reset (SSPR), and account verification with audit review.
-
-**[View Full Lab Documentation](Entra_ID_User_Lifecycle_RBAC.md)**
 
 ---
 
@@ -32,7 +32,7 @@ A new employee (James Whitfield, Marketing Coordinator) is starting Monday and r
 ---
 
 ## Screenshots Included
-All screenshots are located in the `/screenshots` folder.
+8 screenshots, one per task, in the [`screenshots`](screenshots) folder — each is embedded at the matching step of the lab documentation.
 
 ---
 

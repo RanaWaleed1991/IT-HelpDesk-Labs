@@ -1,9 +1,11 @@
 # User Locked Out — MFA Recovery, Temporary Access Pass & Conditional Access Hardening
 
-**Ticket Subject:** User Locked Out — MFA Recovery After Device Change
-**Category:** Identity & Access Management / Security
-**Priority:** P2 — User Blocked
-**Environment:** Microsoft Entra ID / Microsoft 365 (ResolvePoint IT tenant)
+| Field | Detail |
+|---|---|
+| **Ticket Subject** | User Locked Out — MFA Recovery After Device Change |
+| **Category** | Identity & Access Management / Security |
+| **Priority** | P2 — User Blocked |
+| **Environment** | Microsoft Entra ID / Microsoft 365 (ResolvePoint IT tenant) |
 
 ---
 
@@ -66,6 +68,12 @@ Completed re-registration of the Microsoft Authenticator app, simulating setup o
 ![MFA_Authenticator_successfully_re-added_for_James_Whitfield](screenshots/MFA_Authenticator_successfully_re-added_for_James_Whitfield.png)
 
 ---
+
+### 6. Design the Conditional Access Policy (Follow-On Hardening Request)
+With James recovered, the follow-on management request was to move the tenant off Security Defaults and onto a targeted Conditional Access policy. Two constraints shaped how far this step could go:
+
+- **Security Defaults and Conditional Access are mutually exclusive.** Security Defaults (confirmed ON in Step 1) must be switched off before any Conditional Access policy can be enabled — so the order of operations matters, or the tenant is left with *no* MFA enforcement in between.
+- **The trial subscription expired before enforcement.** The policy below could not be switched on end-to-end, so it is documented as designed rather than shown as enforced.
 
 **Policy Design (as it would be built in production):**
 

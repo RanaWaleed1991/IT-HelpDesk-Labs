@@ -1,27 +1,45 @@
-# Quick Assist Printer Lab
+# Remote Support with Quick Assist — Default Printer Fix
+
+**[View Full Lab Documentation](Quick_Assist_Printer_Lab.md)**
 
 ## Purpose
-This lab demonstrates how Quick Assist can be used to remotely support an end-user by setting a default printer.
+This lab resolves a remote user's printing problem with Microsoft Quick Assist: a secure session is started with a one-time code, the cause (the wrong default printer) is found on the user's own screen, fixed, and verified with a test page before disconnecting.
 
-[View Full Lab Documentation](./Quick_Assist_Printer_Lab.md)
+---
+
+## Scenario
+A remote user says nothing prints. Over Quick Assist, the technician finds that their default printer is a Generic / Text Only printer with no device behind it, sets their real printer as default, and prints a test page while the user watches.
+
+---
 
 ## Prerequisites
-- Two Windows machines (Tech-PC and End-User PC) with Quick Assist available  
-- Active network connection between both systems  
-- A virtual printer (e.g., PDF Architect) installed on the End-User PC  
+- Two Windows machines — technician (Windows 11) and user (Windows 10) — with Quick Assist
+- Internet access on both machines
+- A printer on the user's PC (here, the PDF Architect 9 virtual printer)
+
+---
 
 ## Lab Tasks
-- Establish a Quick Assist session from Tech-PC to End-User PC  
-- Navigate to Devices and Printers on the End-User PC  
-- Set the correct default printer  
-- Print a test page to verify functionality  
+1. **Start a Quick Assist session** and share the security code.
+2. **User enters the code** and grants control.
+3. **Confirm remote control** of the user's PC.
+4. **Diagnose** — find the current default printer.
+5. **Fix** — set the correct default printer.
+6. **Verify** — print a test page before ending the session.
 
-## Screenshots
-All screenshots are stored in the `/screenshots/` folder.
+---
+
+## Screenshots Included
+6 screenshots in the [`screenshots`](screenshots) folder, embedded step by step in the lab documentation.
+
+---
 
 ## Learning Outcomes
-By completing this lab, I demonstrated:
+- Starting and managing a secure, user-approved Quick Assist session.
+- Diagnosing printing problems remotely.
+- Verifying fixes before disconnecting, and recognising remote-support scam patterns.
 
-- How to initiate and manage a Quick Assist session  
-- Troubleshooting a printer issues remotely  
-- Fixes are validated by printing a test page  
+---
+
+## Skills Demonstrated
+`Remote Support` · `Quick Assist` · `Printer Troubleshooting` · `Customer Communication`

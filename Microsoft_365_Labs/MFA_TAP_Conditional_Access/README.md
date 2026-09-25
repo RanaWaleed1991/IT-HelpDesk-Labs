@@ -1,10 +1,9 @@
-[README.md](https://github.com/user-attachments/files/31627572/README.md)
-# Ticket #502: MFA Recovery, Temporary Access Pass & Conditional Access
+# MFA Recovery, Temporary Access Pass & Conditional Access
+
+**[View Full Lab Documentation](MFA_TAP_Conditional_Access.md)**
 
 ## Purpose
-This lab demonstrates end-to-end MFA lockout recovery in Microsoft Entra ID — diagnosing a locked-out user, issuing a Temporary Access Pass, re-registering MFA on a new device, and migrating the tenant's security posture from Security Defaults toward a targeted Conditional Access policy.
-
-**[View Full Lab Documentation](Ticket_502_MFA_TAP_Conditional_Access.md)**
+This lab demonstrates end-to-end MFA lockout recovery in Microsoft Entra ID — diagnosing a locked-out user, issuing a Temporary Access Pass, re-registering MFA on a new device, and planning the tenant's move from Security Defaults to a targeted Conditional Access policy.
 
 ---
 
@@ -34,7 +33,7 @@ James Whitfield (Marketing Coordinator) replaced his phone and is locked out of 
 ---
 
 ## Screenshots Included
-All screenshots are located in the `/screenshots` folder.
+6 screenshots covering Tasks 1–5 in the [`screenshots`](screenshots) folder — each is embedded at the matching step of the lab documentation.
 
 ---
 
@@ -48,7 +47,7 @@ All screenshots are located in the `/screenshots` folder.
 ---
 
 ## Environment Note
-The tenant's Microsoft 365 subscription expired before the Conditional Access policy could be enforced end-to-end. The policy is documented as designed, with the Security Defaults dependency demonstrated via the policy-builder screenshot — reflecting how real-world work blocked by environment constraints is handled professionally.
+The tenant's Microsoft 365 subscription expired before the Conditional Access policy could be enforced end-to-end. The policy is documented as designed (Step 6), including the Security Defaults dependency — reflecting how real-world work blocked by an environment constraint is handled professionally: scope what was done, document what remains.
 
 ---
 
