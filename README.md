@@ -73,6 +73,8 @@ I try to document a lab the way I'd want a ticket handed over to me:
 
 I did these labs in my own home lab (VMware virtual machines, Microsoft 365 trial tenants and a ServiceNow developer instance). The Group Policy lab used TryHackMe's Active Directory environment. The tickets are realistic scenarios built around that hands-on work. Where I broke something on purpose to recreate a problem, the lab says so. The slow startup lab was done on my own laptop.
 
+For the full details of the VMs, tenants and tools, see **[How I Built My Lab Environment](Lab_Environment_Setup.md)**.
+
 ---
 
 ## What I'm Looking For

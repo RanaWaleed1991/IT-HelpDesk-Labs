@@ -5,7 +5,7 @@
 | **Ticket Subject** | "My laptop takes forever to start and the disk light never stops" |
 | **Category** | Hardware / Performance |
 | **Priority** | P3 — Productivity Impacted |
-| **Environment** | Physical Dell laptop (Windows 8.x) — a real machine, not a VM. Measurements taken 17 Aug 2025 (before) and 19 Aug 2025 (after) |
+| **Environment** | Physical laptop (computer name "dell") — a real machine, not a VM. Measurements taken 17 Aug 2025 (before) and 19 Aug 2025 (after) |
 
 ---
 
